@@ -1,0 +1,16 @@
+name: Bug report
+description: Report reproducible behavior using synthetic data
+body:
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproducer and expected behavior
+      description: Include the command, OS, Python/tool versions, and minimal synthetic input. Exclude credentials and private data.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true

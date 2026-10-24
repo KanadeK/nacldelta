@@ -1,0 +1,1 @@
+{"NetworkAcls":[{"NetworkAclId":"acl-example","Entries":[{"RuleNumber":100,"Protocol":"6","RuleAction":"allow","Egress":false,"CidrBlock":"192.0.2.0/24","PortRange":{"From":443,"To":443}},{"RuleNumber":50,"Protocol":"6","RuleAction":"deny","Egress":false,"CidrBlock":"192.0.2.64/26","PortRange":{"From":443,"To":443}}]}]}

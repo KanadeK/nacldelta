@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools==84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nacldelta"
+version = "0.1.0"
+description = "Compare effective AWS network ACL address decisions for one TCP or UDP port"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "KanadeK"}]
+dependencies = []
+classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent", "Environment :: Console"]
+
+[project.urls]
+Repository = "https://github.com/KanadeK/nacldelta"
+Issues = "https://github.com/KanadeK/nacldelta/issues"
+
+[project.scripts]
+nacldelta = "nacldelta.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S603", "S607"]
+"examples/**" = ["S603", "S607"]
+
+[tool.coverage.run]
+source = ["nacldelta"]
+
+[tool.coverage.report]
+show_missing = true
